@@ -1078,12 +1078,10 @@ PRODUCT_PACKAGES += \
     datastatusnotification \
     embms \
     fastdormancy \
-    GFManager \
     shutdownlistener \
     CNEService \
     QtiTetherService \
     com.qualcomm.location \
-    FingerprintExtensionService \
     qcrilmsgtunnel \
     ims \
     imssettings \
