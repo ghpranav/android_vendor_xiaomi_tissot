@@ -184,6 +184,7 @@ PRODUCT_COPY_FILES += \
     vendor/xiaomi/tissot/proprietary/lib64/hw/fingerprint.default.so:system/lib64/hw/fingerprint.default.so \
     vendor/xiaomi/tissot/proprietary/lib64/hw/fingerprint.fpc.msm8953.so:system/lib64/hw/fingerprint.fpc.msm8953.so \
     vendor/xiaomi/tissot/proprietary/lib64/hw/fingerprint.goodix.msm8953.so:system/lib64/hw/fingerprint.goodix.msm8953.so \
+    vendor/xiaomi/tissot/proprietary/lib64/hw/gf_fingerprint.goodix.msm8953.so:system/lib64/hw/gf_fingerprint.goodix.msm8953.so \
     vendor/xiaomi/tissot/proprietary/lib64/hw/gf_fingerprint.default.so:system/lib64/hw/gf_fingerprint.default.so \
     vendor/xiaomi/tissot/proprietary/lib64/hw/sensors.msm8953.so:system/lib64/hw/sensors.msm8953.so \
     vendor/xiaomi/tissot/proprietary/lib64/lib_fpc_tac_shared.so:system/lib64/lib_fpc_tac_shared.so \
