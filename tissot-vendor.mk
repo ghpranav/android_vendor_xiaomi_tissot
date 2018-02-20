@@ -25,6 +25,7 @@ PRODUCT_COPY_FILES += \
     vendor/xiaomi/tissot/proprietary/bin/goodixfingerprintd:system/bin/goodixfingerprintd \
     vendor/xiaomi/tissot/proprietary/bin/hci_qcomm_init:system/bin/hci_qcomm_init \
     vendor/xiaomi/tissot/proprietary/bin/hvdcp_opti:system/bin/hvdcp_opti \
+    vendor/xiaomi/tissot/proprietary/bin/ims_rtp_daemon:system/bin/ims_rtp_daemon \
     vendor/xiaomi/tissot/proprietary/bin/imscmservice:system/bin/imscmservice \
     vendor/xiaomi/tissot/proprietary/bin/imsdatadaemon:system/bin/imsdatadaemon \
     vendor/xiaomi/tissot/proprietary/bin/imsqmidaemon:system/bin/imsqmidaemon \
@@ -54,6 +55,8 @@ PRODUCT_COPY_FILES += \
     vendor/xiaomi/tissot/proprietary/etc/acdbdata/QRD/QRD_Hdmi_cal.acdb:system/etc/acdbdata/QRD/QRD_Hdmi_cal.acdb \
     vendor/xiaomi/tissot/proprietary/etc/acdbdata/QRD/QRD_Headset_cal.acdb:system/etc/acdbdata/QRD/QRD_Headset_cal.acdb \
     vendor/xiaomi/tissot/proprietary/etc/acdbdata/QRD/QRD_Speaker_cal.acdb:system/etc/acdbdata/QRD/QRD_Speaker_cal.acdb \
+    vendor/xiaomi/tissot/proprietary/etc/acdbdata/QRD/QRD_adsp_avs_config.acdb:system/etc/acdbdata/QRD/QRD_adsp_avs_config.acdb \
+    vendor/xiaomi/tissot/proprietary/etc/acdbdata/QRD/QRD_workspaceFile.qwsp:system/etc/acdbdata/QRD/QRD_workspaceFile.qwsp \
     vendor/xiaomi/tissot/proprietary/etc/cacert_location.pem:system/etc/cacert_location.pem \
     vendor/xiaomi/tissot/proprietary/etc/camera/camera_config.xml:system/etc/camera/camera_config.xml \
     vendor/xiaomi/tissot/proprietary/etc/camera/csidtg_camera.xml:system/etc/camera/csidtg_camera.xml \
@@ -831,7 +834,9 @@ PRODUCT_COPY_FILES += \
     vendor/xiaomi/tissot/proprietary/vendor/lib/libqomx_jpegdec.so:system/vendor/lib/libqomx_jpegdec.so \
     vendor/xiaomi/tissot/proprietary/vendor/lib/libqomx_jpegenc.so:system/vendor/lib/libqomx_jpegenc.so \
     vendor/xiaomi/tissot/proprietary/vendor/lib/libqomx_jpegenc_pipe.so:system/vendor/lib/libqomx_jpegenc_pipe.so \
+    vendor/xiaomi/tissot/proprietary/vendor/lib/libqti-at.so:system/vendor/lib/libqti-at.so \
     vendor/xiaomi/tissot/proprietary/vendor/lib/libqti-iop-client.so:system/vendor/lib/libqti-iop-client.so \
+    vendor/xiaomi/tissot/proprietary/vendor/lib/libqti-iop.so:system/vendor/lib/libqti-iop.so \
     vendor/xiaomi/tissot/proprietary/vendor/lib/libqti-perfd-client.so:system/vendor/lib/libqti-perfd-client.so \
     vendor/xiaomi/tissot/proprietary/vendor/lib/libqti-wl.so:system/vendor/lib/libqti-wl.so \
     vendor/xiaomi/tissot/proprietary/vendor/lib/libqti_performance.so:system/vendor/lib/libqti_performance.so \
@@ -841,6 +846,28 @@ PRODUCT_COPY_FILES += \
     vendor/xiaomi/tissot/proprietary/vendor/lib/librs_adreno.so:system/vendor/lib/librs_adreno.so \
     vendor/xiaomi/tissot/proprietary/vendor/lib/librs_adreno_sha1.so:system/vendor/lib/librs_adreno_sha1.so \
     vendor/xiaomi/tissot/proprietary/vendor/lib/libscale.so:system/vendor/lib/libscale.so \
+    vendor/xiaomi/tissot/proprietary/vendor/lib/libscveBlobDescriptor.so:system/vendor/lib/libscveBlobDescriptor.so \
+    vendor/xiaomi/tissot/proprietary/vendor/lib/libscveBlobDescriptor_stub.so:system/vendor/lib/libscveBlobDescriptor_stub.so \
+    vendor/xiaomi/tissot/proprietary/vendor/lib/libscveCleverCapture.so:system/vendor/lib/libscveCleverCapture.so \
+    vendor/xiaomi/tissot/proprietary/vendor/lib/libscveCleverCapture_stub.so:system/vendor/lib/libscveCleverCapture_stub.so \
+    vendor/xiaomi/tissot/proprietary/vendor/lib/libscveCommon.so:system/vendor/lib/libscveCommon.so \
+    vendor/xiaomi/tissot/proprietary/vendor/lib/libscveCommon_stub.so:system/vendor/lib/libscveCommon_stub.so \
+    vendor/xiaomi/tissot/proprietary/vendor/lib/libscveFaceRecognition.so:system/vendor/lib/libscveFaceRecognition.so \
+    vendor/xiaomi/tissot/proprietary/vendor/lib/libscveImageCloning.so:system/vendor/lib/libscveImageCloning.so \
+    vendor/xiaomi/tissot/proprietary/vendor/lib/libscveImageCorrection.so:system/vendor/lib/libscveImageCorrection.so \
+    vendor/xiaomi/tissot/proprietary/vendor/lib/libscveImageRemoval.so:system/vendor/lib/libscveImageRemoval.so \
+    vendor/xiaomi/tissot/proprietary/vendor/lib/libscveMotionVector.so:system/vendor/lib/libscveMotionVector.so \
+    vendor/xiaomi/tissot/proprietary/vendor/lib/libscveObjectMatting.so:system/vendor/lib/libscveObjectMatting.so \
+    vendor/xiaomi/tissot/proprietary/vendor/lib/libscveObjectMatting_stub.so:system/vendor/lib/libscveObjectMatting_stub.so \
+    vendor/xiaomi/tissot/proprietary/vendor/lib/libscveObjectSegmentation.so:system/vendor/lib/libscveObjectSegmentation.so \
+    vendor/xiaomi/tissot/proprietary/vendor/lib/libscveObjectSegmentation_stub.so:system/vendor/lib/libscveObjectSegmentation_stub.so \
+    vendor/xiaomi/tissot/proprietary/vendor/lib/libscveObjectTracker.so:system/vendor/lib/libscveObjectTracker.so \
+    vendor/xiaomi/tissot/proprietary/vendor/lib/libscveObjectTracker_stub.so:system/vendor/lib/libscveObjectTracker_stub.so \
+    vendor/xiaomi/tissot/proprietary/vendor/lib/libscvePanorama.so:system/vendor/lib/libscvePanorama.so \
+    vendor/xiaomi/tissot/proprietary/vendor/lib/libscvePanorama_lite.so:system/vendor/lib/libscvePanorama_lite.so \
+    vendor/xiaomi/tissot/proprietary/vendor/lib/libscveTextReco.so:system/vendor/lib/libscveTextReco.so \
+    vendor/xiaomi/tissot/proprietary/vendor/lib/libscveTextRecoPostProcessing.so:system/vendor/lib/libscveTextRecoPostProcessing.so \
+    vendor/xiaomi/tissot/proprietary/vendor/lib/libscveTextReco_stub.so:system/vendor/lib/libscveTextReco_stub.so \
     vendor/xiaomi/tissot/proprietary/vendor/lib/libsd_sdk_display.so:system/vendor/lib/libsd_sdk_display.so \
     vendor/xiaomi/tissot/proprietary/vendor/lib/libsdsprpc.so:system/vendor/lib/libsdsprpc.so \
     vendor/xiaomi/tissot/proprietary/vendor/lib/libsecureui.so:system/vendor/lib/libsecureui.so \
@@ -989,6 +1016,7 @@ PRODUCT_COPY_FILES += \
     vendor/xiaomi/tissot/proprietary/vendor/lib64/libllvm-qcom.so:system/vendor/lib64/libllvm-qcom.so \
     vendor/xiaomi/tissot/proprietary/vendor/lib64/libllvm-qgl.so:system/vendor/lib64/libllvm-qgl.so \
     vendor/xiaomi/tissot/proprietary/vendor/lib64/libloc_ext.so:system/vendor/lib64/libloc_ext.so \
+    vendor/xiaomi/tissot/proprietary/vendor/lib64/libloc_externalDr.so:system/vendor/lib64/libloc_externalDr.so \
     vendor/xiaomi/tissot/proprietary/vendor/lib64/liblocationservice.so:system/vendor/lib64/liblocationservice.so \
     vendor/xiaomi/tissot/proprietary/vendor/lib64/liblocationservice_glue.so:system/vendor/lib64/liblocationservice_glue.so \
     vendor/xiaomi/tissot/proprietary/vendor/lib64/liblowi_client.so:system/vendor/lib64/liblowi_client.so \
@@ -1018,7 +1046,9 @@ PRODUCT_COPY_FILES += \
     vendor/xiaomi/tissot/proprietary/vendor/lib64/libqmi_csi.so:system/vendor/lib64/libqmi_csi.so \
     vendor/xiaomi/tissot/proprietary/vendor/lib64/libqmi_encdec.so:system/vendor/lib64/libqmi_encdec.so \
     vendor/xiaomi/tissot/proprietary/vendor/lib64/libqmiservices.so:system/vendor/lib64/libqmiservices.so \
+    vendor/xiaomi/tissot/proprietary/vendor/lib64/libqti-at.so:system/vendor/lib64/libqti-at.so \
     vendor/xiaomi/tissot/proprietary/vendor/lib64/libqti-iop-client.so:system/vendor/lib64/libqti-iop-client.so \
+    vendor/xiaomi/tissot/proprietary/vendor/lib64/libqti-iop.so:system/vendor/lib64/libqti-iop.so \
     vendor/xiaomi/tissot/proprietary/vendor/lib64/libqti-perfd-client.so:system/vendor/lib64/libqti-perfd-client.so \
     vendor/xiaomi/tissot/proprietary/vendor/lib64/libqti-wl.so:system/vendor/lib64/libqti-wl.so \
     vendor/xiaomi/tissot/proprietary/vendor/lib64/libqti_performance.so:system/vendor/lib64/libqti_performance.so \
@@ -1034,6 +1064,28 @@ PRODUCT_COPY_FILES += \
     vendor/xiaomi/tissot/proprietary/vendor/lib64/librs_adreno_sha1.so:system/vendor/lib64/librs_adreno_sha1.so \
     vendor/xiaomi/tissot/proprietary/vendor/lib64/libscalar.so:system/vendor/lib64/libscalar.so \
     vendor/xiaomi/tissot/proprietary/vendor/lib64/libscale.so:system/vendor/lib64/libscale.so \
+    vendor/xiaomi/tissot/proprietary/vendor/lib64/libscveBlobDescriptor.so:system/vendor/lib64/libscveBlobDescriptor.so \
+    vendor/xiaomi/tissot/proprietary/vendor/lib64/libscveBlobDescriptor_stub.so:system/vendor/lib64/libscveBlobDescriptor_stub.so \
+    vendor/xiaomi/tissot/proprietary/vendor/lib64/libscveCleverCapture.so:system/vendor/lib64/libscveCleverCapture.so \
+    vendor/xiaomi/tissot/proprietary/vendor/lib64/libscveCleverCapture_stub.so:system/vendor/lib64/libscveCleverCapture_stub.so \
+    vendor/xiaomi/tissot/proprietary/vendor/lib64/libscveCommon.so:system/vendor/lib64/libscveCommon.so \
+    vendor/xiaomi/tissot/proprietary/vendor/lib64/libscveCommon_stub.so:system/vendor/lib64/libscveCommon_stub.so \
+    vendor/xiaomi/tissot/proprietary/vendor/lib64/libscveFaceRecognition.so:system/vendor/lib64/libscveFaceRecognition.so \
+    vendor/xiaomi/tissot/proprietary/vendor/lib64/libscveImageCloning.so:system/vendor/lib64/libscveImageCloning.so \
+    vendor/xiaomi/tissot/proprietary/vendor/lib64/libscveImageCorrection.so:system/vendor/lib64/libscveImageCorrection.so \
+    vendor/xiaomi/tissot/proprietary/vendor/lib64/libscveImageRemoval.so:system/vendor/lib64/libscveImageRemoval.so \
+    vendor/xiaomi/tissot/proprietary/vendor/lib64/libscveMotionVector.so:system/vendor/lib64/libscveMotionVector.so \
+    vendor/xiaomi/tissot/proprietary/vendor/lib64/libscveObjectMatting.so:system/vendor/lib64/libscveObjectMatting.so \
+    vendor/xiaomi/tissot/proprietary/vendor/lib64/libscveObjectMatting_stub.so:system/vendor/lib64/libscveObjectMatting_stub.so \
+    vendor/xiaomi/tissot/proprietary/vendor/lib64/libscveObjectSegmentation.so:system/vendor/lib64/libscveObjectSegmentation.so \
+    vendor/xiaomi/tissot/proprietary/vendor/lib64/libscveObjectSegmentation_stub.so:system/vendor/lib64/libscveObjectSegmentation_stub.so \
+    vendor/xiaomi/tissot/proprietary/vendor/lib64/libscveObjectTracker.so:system/vendor/lib64/libscveObjectTracker.so \
+    vendor/xiaomi/tissot/proprietary/vendor/lib64/libscveObjectTracker_stub.so:system/vendor/lib64/libscveObjectTracker_stub.so \
+    vendor/xiaomi/tissot/proprietary/vendor/lib64/libscvePanorama.so:system/vendor/lib64/libscvePanorama.so \
+    vendor/xiaomi/tissot/proprietary/vendor/lib64/libscvePanorama_lite.so:system/vendor/lib64/libscvePanorama_lite.so \
+    vendor/xiaomi/tissot/proprietary/vendor/lib64/libscveTextReco.so:system/vendor/lib64/libscveTextReco.so \
+    vendor/xiaomi/tissot/proprietary/vendor/lib64/libscveTextRecoPostProcessing.so:system/vendor/lib64/libscveTextRecoPostProcessing.so \
+    vendor/xiaomi/tissot/proprietary/vendor/lib64/libscveTextReco_stub.so:system/vendor/lib64/libscveTextReco_stub.so \
     vendor/xiaomi/tissot/proprietary/vendor/lib64/libsd_sdk_display.so:system/vendor/lib64/libsd_sdk_display.so \
     vendor/xiaomi/tissot/proprietary/vendor/lib64/libsdm-color.so:system/vendor/lib64/libsdm-color.so \
     vendor/xiaomi/tissot/proprietary/vendor/lib64/libsdm-diag.so:system/vendor/lib64/libsdm-diag.so \
