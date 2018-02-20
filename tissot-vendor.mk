@@ -57,7 +57,6 @@ PRODUCT_COPY_FILES += \
     vendor/xiaomi/tissot/proprietary/etc/acdbdata/QRD/QRD_Speaker_cal.acdb:system/etc/acdbdata/QRD/QRD_Speaker_cal.acdb \
     vendor/xiaomi/tissot/proprietary/etc/acdbdata/QRD/QRD_adsp_avs_config.acdb:system/etc/acdbdata/QRD/QRD_adsp_avs_config.acdb \
     vendor/xiaomi/tissot/proprietary/etc/acdbdata/QRD/QRD_workspaceFile.qwsp:system/etc/acdbdata/QRD/QRD_workspaceFile.qwsp \
-    vendor/xiaomi/tissot/proprietary/etc/cacert_location.pem:system/etc/cacert_location.pem \
     vendor/xiaomi/tissot/proprietary/etc/camera/camera_config.xml:system/etc/camera/camera_config.xml \
     vendor/xiaomi/tissot/proprietary/etc/camera/csidtg_camera.xml:system/etc/camera/csidtg_camera.xml \
     vendor/xiaomi/tissot/proprietary/etc/camera/csidtg_chromatix.xml:system/etc/camera/csidtg_chromatix.xml \
